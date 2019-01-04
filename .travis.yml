@@ -1,0 +1,29 @@
+# setup environment
+dist: xenial
+sudo: false
+language: go
+
+notifications:
+  email: false
+
+git:
+  depth: 5
+
+# setup tests
+env:
+  global:
+    - APM_TEST_PACKAGES="language-yaml"
+    - ATOM_LINT_WITH_BUNDLED_NODE="true"
+
+matrix:
+  include:
+    - os: linux
+    - os: linux
+      env: ATOM_CHANNEL=beta
+
+# execute tests
+install:
+- sudo add-apt-repository -y 'deb http://apt.kubernetes.io/ kubernetes-xenial main' && sudo apt-get update
+- sudo apt-get install -y --allow-unauthenticated kubectl=1.12.4-00
+before_script: kubectl version
+script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
