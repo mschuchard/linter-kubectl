@@ -108,7 +108,7 @@ describe('The Kubectl provider for Linter', () => {
       waitsForPromise(() => {
         return lint(editor).then(messages => {
           expect(messages[0].severity).toBeDefined();
-          expect(messages[0].severity).toEqual('error');
+          expect(messages[0].severity).toEqual('info');
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toEqual("Error parsing YAML. Use a YAML Linter for specific assistance.");
           expect(messages[0].location.file).toBeDefined();
