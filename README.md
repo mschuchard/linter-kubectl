@@ -9,5 +9,5 @@
 `kubectl >= 1.7` is required to be installed before using this. The `Linter` and `Language-Yaml` Atom packages are also required.
 
 ### Usage
-- All YAML files with a `apiVersion` key that has a value beginning with `v` will be linted with this linter. Be aware of this in case you have a non-Kubernetes YAML file with this characteristic. Also be aware of this in case you have a typo for the `apiVersion` key, since this linter will then not trigger.
+- All YAML files with a `apiVersion` key that has a value containing a `v` followed by a number will be linted with this linter. Be aware of this in case you have a non-Kubernetes YAML file with this characteristic. Also be aware of this in case you have a typo for the `apiVersion` key, since this linter will then not trigger.
 - If your Kubernetes spec has a YAML parsing error, this linter will notify of it but not provide specific information about it. Please use a YAML Linter for that functionality.
