@@ -1,5 +1,6 @@
 ### Next (Roadmap)
 - Fix overly restrictive check on Kubernetes `apiVersion` key.
+- Fix incorrect usage of kubeconfig setting.
 
 create fixture for multiple errors
 spec assertions not working for no real reason
