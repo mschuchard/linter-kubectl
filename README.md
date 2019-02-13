@@ -6,7 +6,7 @@
 `Linter-Kubectl` aims to provide functional and robust `Kubectl` linting functionality within Atom.
 
 ### Installation
-`kubectl >= 1.7` is required to be installed before using this. The `Linter` and `Language-Yaml` Atom packages are also required.
+`kubectl >= 1.7` is required to be installed before using this. You also need a valid Kubernetes cluster connection for kubectl. The `Linter` and `Language-Yaml` Atom packages are also required.
 
 ### Usage
 - All YAML files with a `apiVersion` key that has a value containing a `v` followed by a number will be linted with this linter. Be aware of this in case you have a non-Kubernetes YAML file with this characteristic. Also be aware of this in case you have a typo for the `apiVersion` key, since this linter will then not trigger.
