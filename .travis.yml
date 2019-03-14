@@ -24,6 +24,6 @@ matrix:
 # execute tests
 install:
 - sudo add-apt-repository -y 'deb http://apt.kubernetes.io/ kubernetes-xenial main' && sudo apt-get update
-- sudo apt-get install -y --allow-unauthenticated kubectl=1.12.4-00
+- sudo apt-get install -y --allow-unauthenticated kubectl
 before_script: kubectl version
 script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'

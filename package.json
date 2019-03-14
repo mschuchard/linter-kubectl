@@ -2,7 +2,7 @@
   "name": "linter-kubectl",
   "main": "./lib/main.js",
   "version": "1.0.1",
-  "description": "Kubernetes spec validation via kubectl",
+  "description": "Kubernetes manifest validation via kubectl",
   "repository": "https://github.com/mschuchard/linter-kubectl",
   "license": "MIT",
   "keywords": [

@@ -1,4 +1,9 @@
-### 1.0.1 (Roadmap)
+### Next (Roadmap)
+create fixture for multiple errors
+spec assertions not working for no real reason
+get travis working
+
+### 1.0.1
 - Fix overly restrictive check on Kubernetes `apiVersion` key.
 - Fix incorrect usage of kubeconfig setting.
 
