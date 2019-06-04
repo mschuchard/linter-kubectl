@@ -1,4 +1,6 @@
 ### Next (Roadmap)
+- Add config option for server side dry run.
+
 create fixture for multiple errors
 spec assertions not working for no real reason
 get travis working
