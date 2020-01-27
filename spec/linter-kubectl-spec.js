@@ -17,7 +17,7 @@ describe('The Kubectl provider for Linter', () => {
 
   describe('checks a file with a key issue and', () => {
     let editor = null;
-    const badFile = path.join(__dirname, 'fixtures', 'syntax-bad-key.yml');
+    const badFile = path.join(__dirname, 'fixtures', 'syntax-bad-key.yaml');
     beforeEach(() => {
       waitsForPromise(() =>
         atom.workspace.open(badFile).then(openEditor => {
@@ -52,7 +52,7 @@ describe('The Kubectl provider for Linter', () => {
 
   describe('checks a file with a value issue and', () => {
     let editor = null;
-    const badFile = path.join(__dirname, 'fixtures', 'syntax-bad-value.yml');
+    const badFile = path.join(__dirname, 'fixtures', 'syntax-bad-value.yaml');
     beforeEach(() => {
       waitsForPromise(() =>
         atom.workspace.open(badFile).then(openEditor => {
