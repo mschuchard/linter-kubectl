@@ -2,8 +2,9 @@
 - Add config option for server side dry run.
 
 create fixture for multiple errors
-spec assertions not working for no real reason
 get travis working
+ignore Chart.yaml when linting
+add in ignore on activate if kubectl returns error message
 
 ### 1.0.1
 - Fix overly restrictive check on Kubernetes `apiVersion` key.

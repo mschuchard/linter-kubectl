@@ -1,10 +1,13 @@
 # setup environment
-dist: xenial
-sudo: false
+dist: bionic
 language: go
 
 notifications:
   email: false
+
+branches:
+  only:
+  - master
 
 git:
   depth: 5
@@ -23,7 +26,7 @@ matrix:
 
 # execute tests
 install:
-- sudo add-apt-repository -y 'deb http://apt.kubernetes.io/ kubernetes-xenial main' && sudo apt-get update
+- sudo add-apt-repository -y 'deb http://apt.kubernetes.io/ kubernetes-bionic main' && sudo apt-get update
 - sudo apt-get install -y --allow-unauthenticated kubectl
 before_script: kubectl version
 script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
