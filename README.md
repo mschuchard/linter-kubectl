@@ -11,3 +11,4 @@
 ### Usage
 - All YAML files with a `apiVersion` key that has a value containing a `v` followed by a number will be linted with this linter. Be aware of this in case you have a non-Kubernetes YAML file with this characteristic. Also be aware of this in case you have a typo for the `apiVersion` key, since this linter will then not trigger.
 - If your Kubernetes manifest has a YAML parsing error, this linter will notify of it but not provide specific information about it. Please use a YAML Linter for that functionality.
+- This package is currently incompatible with kubectl version >= 1.18. You will need to downgrade to 1.17 for compatibility with this package. Compatibility will be introduced with the next minor version update.
