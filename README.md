@@ -1,7 +1,7 @@
 ![Preview](https://raw.githubusercontent.com/mschuchard/linter-kubectl/master/linter_kubectl.png)
 
 ### Linter-kubectl
-[![Build Status](https://travis-ci.org/mschuchard/linter-kubectl.svg?branch=master)](https://travis-ci.org/mschuchard/linter-kubectl)
+[![Build Status](https://travis-ci.com/mschuchard/linter-kubectl.svg?branch=master)](https://travis-ci.com/mschuchard/linter-kubectl)
 
 `Linter-Kubectl` aims to provide functional and robust `Kubectl` linting functionality within Atom.
 
