@@ -1,4 +1,6 @@
 ### (Next)
+- Updates to Linter API usage.
+
 - create fixture for multiple errors
 - get travis working
 
