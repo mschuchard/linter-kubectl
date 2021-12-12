@@ -1,9 +1,9 @@
-### (Next)
+### 1.2.0 (Next)
 - Updates to Linter API usage.
+- Increase minimum kubectl version to 1.18.
 
 - create fixture for multiple errors
 - get travis working
-- 1.2 require kubectl >= 1.18
 
 ### 1.1.0
 - Ignore linting Helm Chart metadata files.
