@@ -4,3 +4,5 @@ spec
 linter_kubectl.png
 .git
 .travis.yml
+.circleci
+.github
