@@ -4,9 +4,12 @@ name: ci
 on:
   push:
     branches: [master]
+    paths:
+    - '**.js'
   pull_request:
     branches: [master]
-
+    paths:
+    - '**.js'
 env:
   CI: true
   PACKAGES: 'language-hcl'
@@ -15,7 +18,7 @@ jobs:
   lint-and-test:
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-22.04]
         channel: [stable]
     runs-on: ${{ matrix.os }}
     steps:
