@@ -1,3 +1,8 @@
+### 1.2.1 (Next)
+- Capture errors in new output format
+
+non-manifest yaml file in fixtures to ignore
+
 ### 1.2.0
 - Updates to Linter API usage.
 - Increase minimum kubectl version to 1.18.
