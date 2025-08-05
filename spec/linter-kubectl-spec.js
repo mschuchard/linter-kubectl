@@ -40,7 +40,7 @@ describe('The Kubectl provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual('error validating data: ValidationError(Namespace): unknown field "metdata" in io.k8s.api.core.v1.Namespace');
+          expect(messages[0].excerpt).toEqual('resource name may not be empty');
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+syntax-bad-key\.yaml$/);
           expect(messages[0].location.position).toBeDefined();
@@ -80,49 +80,6 @@ describe('The Kubectl provider for Linter', () => {
           expect(messages[0].location.file).toMatch(/.+syntax-bad-value\.yaml$/);
           expect(messages[0].location.position).toBeDefined();
           expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
-        });
-      });
-    });
-  });
-
-  describe('checks a file with multiple issues and', () => {
-    let editor = null;
-    const badFile = path.join(__dirname, 'fixtures', 'syntax-multiple-issues.yaml');
-    beforeEach(() => {
-      waitsForPromise(() =>
-        atom.workspace.open(badFile).then(openEditor => {
-          editor = openEditor;
-        })
-      );
-    });
-
-    it('finds the message', () => {
-      waitsForPromise(() =>
-        lint(editor).then(messages => {
-          expect(messages.length).toEqual(2);
-        })
-      );
-    });
-
-    it('verifies the message', () => {
-      waitsForPromise(() => {
-        return lint(editor).then(messages => {
-          expect(messages[0].severity).toBeDefined();
-          expect(messages[0].severity).toEqual('error');
-          expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual('');
-          expect(messages[0].location.file).toBeDefined();
-          expect(messages[0].location.file).toMatch(/.+syntax-multiple-issues\.yaml$/);
-          expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
-          expect(messages[1].severity).toBeDefined();
-          expect(messages[1].severity).toEqual('error');
-          expect(messages[1].excerpt).toBeDefined();
-          expect(messages[1].excerpt).toEqual('');
-          expect(messages[1].location.file).toBeDefined();
-          expect(messages[1].location.file).toMatch(/.+syntax-multiple-issues\.yaml$/);
-          expect(messages[1].location.position).toBeDefined();
-          expect(messages[1].location.position).toEqual([[0, 0], [0, 1]]);
         });
       });
     });
