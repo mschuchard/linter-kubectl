@@ -171,4 +171,14 @@ describe('The Kubectl provider for Linter', () => {
       );
     });
   });
+
+  it('ignores a non-manifest yaml file', (done) => {
+    const ignoreFile = path.join(__dirname, 'fixtures', 'not-k8s-manifest.yaml');
+    return atom.workspace.open(ignoreFile).then(editor =>
+      lint(editor).then(messages => {
+      }, () => {
+        done();
+      })
+    );
+  });
 });
