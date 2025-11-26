@@ -1,5 +1,6 @@
 ### 1.2.1 (Next)
-- Capture errors in new output format
+- Capture errors in new output format.
+- Improve package activation.
 
 ### 1.2.0
 - Updates to Linter API usage.
