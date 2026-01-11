@@ -1,4 +1,4 @@
-### 1.2.1 (Next)
+### 1.2.1
 - Capture errors in new output format.
 - Improve package activation.
 
